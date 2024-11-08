@@ -1,0 +1,347 @@
+/* General Styles */
+body {
+    background-color: #f5f5f5; /* Light gray for light mode */
+    color: #333; /* Standard dark text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #1e1e1e; /* Unified dark background */
+    color: #d3d3d3; /* Unified light gray text for better readability */
+  }
+  
+/* Header Styles */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0); /* Transparent */
+    backdrop-filter: blur(5px); /* Optional blur */
+    padding: 10px 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for hiding */
+}
+
+/* Hidden Class - Moves Header Out of View */
+header.hidden {
+    transform: translateY(-100%); /* Slide header up and out of view */
+}
+
+
+/* Navigation List */
+nav ul {
+    display: flex; /* Horizontal alignment of icons */
+    list-style: none; /* No bullets */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between icons */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+}
+
+/* Social Icon Styles */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10%; /* Circular icons */
+    transition: transform 0.3s, opacity 0.3s;
+    object-fit: cover;
+}
+
+nav a:hover .social-icon {
+    transform: scale(1.0); /* Zoom effect on hover */
+    opacity: 0.8;
+}
+
+  
+  /* Button Styles */
+  button {
+    margin: 10px; /* Reduced margin to bring sections closer */
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  body.dark-mode button {
+    background-color: #444; /* Dark mode button color */
+    color: #e0e0e0;
+  }
+  
+  button:hover {
+    background-color: #666; /* Darker button hover for dark mode */
+  }
+  
+/* Rotating Text - Smooth Fade */
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .fade {
+    opacity: 0;
+    animation: fadeInOut 4s ease-in-out infinite; /* 4s cycle for smooth fading */
+  }
+  
+  /* Profile Photo */
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hero Section */
+.hero {
+    text-align: center;
+    padding-top: 120px; /* Space below the header */
+    margin-bottom: 0;
+  }
+  
+  /* Typewriter Text */
+  #typewriter-text {
+    font-size: 4rem; /* Larger, attention-grabbing size */
+    font-weight: bold; /* Make it bold */
+    margin: 10px 0;
+    color: #333;
+    transition: font-size 0.5s ease-in-out;
+  }
+  
+  body.dark-mode #typewriter-text {
+    color: #fff; /* White text in dark mode */
+  }
+  
+  /* Rotating Text Below Typewriter */
+  #rotating-text {
+    font-size: 1.8rem; /* Clear, secondary text */
+    color: #555;
+    margin-bottom: 20px;
+    transition: font-size 0.5s ease-in-out;
+  }
+  
+  body.dark-mode #rotating-text {
+    color: #ddd; /* Light gray in dark mode */
+  }
+  
+  /* Hero Text Container */
+  .hero-text {
+    margin-top: 20px; /* Add spacing between photo and text */
+  }
+  
+  
+  /* About Me Section */
+  .about-me {
+    background-color: #f5f5f5; /* Consistent with body background */
+    padding: 30px 20px; /* Reduced padding for compact layout */
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  body.dark-mode .about-me {
+    background-color: #1e1e1e; /* Unified background color for dark mode */
+  }
+  
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .about-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  body.dark-mode .about-me h2 {
+    color: #ffffff; /* White for better visibility in dark mode */
+  }
+  
+  .about-me p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  body.dark-mode .about-me p {
+    color: #d3d3d3; /* Unified light gray color for all paragraphs */
+  }
+  
+  /* Technical Skills List */
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 30px;
+  }
+  
+  .skills-list li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  body.dark-mode .skills-list li {
+    color: #d3d3d3; /* Consistent color for dark mode */
+  }
+  
+  /* Profile Photo */
+.profile-photo {
+    width: 200px; /* Slightly larger size */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Why Me Section */
+.why-me {
+  background-color: #f9f9f9; /* Subtle background for separation */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.why-me-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.why-me h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.why-me-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.why-me-list li {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+body.dark-mode .why-me {
+  background-color: #1e1e1e; /* Dark mode background */
+}
+
+body.dark-mode .why-me-list li {
+  color: #ddd; /* Light text for dark mode */
+}
+
+/* Resume Button Styles */
+.resume-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+  }
+  
+  /* Hover Effect */
+  .resume-button:hover {
+    background-color: #555;
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Dark Mode Button Styles */
+  body.dark-mode .resume-button {
+    background-color: #444;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .resume-button:hover {
+    background-color: #666;
+  }
+  
+  /* Hero Section */
+.hero {
+    text-align: center;
+    padding-top: 120px; /* Space below the header */
+    margin-bottom: 0; /* Remove extra bottom margin */
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+    margin: 5px 0; /* Reduce vertical margin for tighter spacing */
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #fff; /* Optional border for better visibility */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect */
+#dark-mode-toggle:hover {
+    background-color: #555;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Dark Mode Styling for Button */
+body.dark-mode #dark-mode-toggle {
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark-mode #dark-mode-toggle:hover {
+    background-color: #666;
+}
+
+/* About Me Section */
+.about-me {
+    background-color: #f5f5f5; /* Consistent with body background */
+    padding: 20px 20px; /* Reduce padding for a compact layout */
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s;
+    margin-top: 0; /* Eliminate top margin to reduce gap */
+}
+
+body.dark-mode .about-me {
+    background-color: #1e1e1e; /* Dark mode background */
+}
+
